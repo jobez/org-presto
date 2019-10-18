@@ -7,4 +7,6 @@ require('@babel/register')({
 // const argv = process.argv.slice(2);
 // const example = argv[0];
 
-require('./src/index.js');
+const showtime = require('./src/index.js');
+
+showtime.orgfile_to_renderloop(process.argv.slice(2)[0])

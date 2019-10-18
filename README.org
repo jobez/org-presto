@@ -1,0 +1,3 @@
+* zazen ya ya
+
+  - parse an org file, show a random entry, save the world

@@ -3,6 +3,27 @@
     "blessed": "^0.1.81",
     "orga": "^1.7.0",
     "react": "^16.10.2",
-    "react-blessed": "^0.6.1"
+    "react-blessed": "^0.6.1",
+    "rollup": "^1.24.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-transform-flow-strip-types": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "blessed": "^0.1.81",
+    "invariant": "^2.2.0",
+    "lodash": "^4.x.x",
+    "mocha": "^4.0.1",
+    "neo-blessed": "^0.2.0",
+    "react-motion": "^0.5.2",
+    "rollup": "^0.65.0",
+    "rollup-plugin-babel": "^4.0.2",
+    "rollup-plugin-commonjs": "^9.1.6",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0"
   }
 }

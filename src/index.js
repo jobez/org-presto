@@ -38,8 +38,8 @@ function recur_stringify(obj) {
                                   cache.push(value);
                               }
                               return value;
-                          },
-                         4)
+                          }
+                         )
 
 }
 
@@ -63,34 +63,68 @@ function recur_stringify(obj) {
 //   }
 // }
 
-class App extends Component {
-  componentDidMount() {
-    this.refs.markdown.widget.setMarkdown('# Hello \n Testing `refs`.');
-  }
+// class App extends Component {
+//   componentDidMount() {
+//     this.refs.markdown.widget.setMarkdown('<b>Hello \n Testing `refs`.</b>');
+//   }
 
-  render() {
-    return (
-      <box>
-        <Markdown style={{firstHeading: chalk.red.italic}}>{'# Hello \n This is **markdown** printed in the `terminal` 11'}</Markdown>
-        <Markdown ref="markdown" top={3} style={{firstHeading: chalk.blue}} markdown={'# Hello \n This is **markdown** printed in the `terminal` 11'} />
-      </box>
-    );
-  }
-}
+//   render() {
+//     return (
+//       <box>
+//         <Markdown style={{firstHeading: chalk.red.italic}}>{'# Hello \n This is **markdown** printed in the `terminal` 11'}</Markdown>
+//         <Markdown ref="markdown" top={3} style={{firstHeading: chalk.blue}} markdown={'# Hello \n This is **markdown** printed in the `terminal` 11'} />
+//       </box>
+//     );
+//   }
+// }
 
-// Creating our screen
-const screen = blessed.screen({
-  autoPadding: true,
-  smartCSR: true,
-  title: 'react-blessed hello world'
-});
+// class App extends Component {
+//   render() {
+//       const node = rand_recur(new OrgaParser().parse(contents))
+//       const items = _.map(node.children, recur_stringify)
 
-// Adding a way to quit the program
-screen.key(['escape', 'q', 'C-c'], function(ch, key) {
-  return process.exit(0);
-});
+//     return (
+//       <element>
+//         <list
+//         label= {node.value}
+//           class={{
+//             border: { type: 'line'},
+//             style: { border: { fg: 'blue' } },
+//           }}
+//           width="50%"
+//           height="50%"
+//           left="25%"
+//           top="25%"
+//           style={{
+//             item: { fg: 'black' },
+//             selected: { fg: 'white', bg: 'black' },
+//           }}
+//         clickable={true}
+//         keys={true}
+//         items={ items }
+//         onSelect={ () => console.error('selected') }
+//         />
+//       </element>
+//     );
+//   }
+// }
 
-// Rendering the React app using our screen
-const component = render(<App />, screen);
 
+// // Creating our screen
+// const screen = blessed.screen({
+//   autoPadding: true,
+//   smartCSR: true,
+//   title: 'react-blessed hello world'
+// });
+
+// // Adding a way to quit the program
+// screen.key(['escape', 'q', 'C-c'], function(ch, key) {
+//   return process.exit(0);
+// });
+
+// // Rendering the React app using our screen
+// const component = render(<App />, screen);
+
+    const node = rand_recur(new OrgaParser().parse(contents))
+    console.log(recur_stringify(node))
 }
